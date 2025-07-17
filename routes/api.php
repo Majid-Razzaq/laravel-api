@@ -9,4 +9,8 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 
-Route::get('/demo',[HomeController::class,'index']);
+// Route::get('/demo',[HomeController::class,'index']);
+Route::get('/users',[HomeController::class,'index']);
+Route::get('/user/{id}',[HomeController::class,'show']);
+Route::post('/user/store',[HomeController::class,'store']);
+Route::put('/user/update/{id}',[HomeController::class,'update']);
