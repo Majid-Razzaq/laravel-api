@@ -14,3 +14,5 @@ Route::get('/users',[HomeController::class,'index']);
 Route::get('/user/{id}',[HomeController::class,'show']);
 Route::post('/user/store',[HomeController::class,'store']);
 Route::put('/user/update/{id}',[HomeController::class,'update']);
+Route::delete('/user/delete/{id}',[HomeController::class,'destroy']);
+Route::post('/user/upload',[HomeController::class,'upload']);
